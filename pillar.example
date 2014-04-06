@@ -1,2 +1,39 @@
-template:
-  master: template-master
+djbdns:
+  # for details about dnscache read http://cr.yp.to/djbdns/dnscache.html
+  dnscache:
+    # primary settings
+    settings:
+      # Service directory of dnscache service
+      #   * /etc/sv/dnscache by default
+      LOCATION: /etc/sv/dnscache
+
+      # records limit (maximum DNS records count)
+      #   * 1000000 is default
+      CACHESIZE: 1000000
+
+      # memory limit (maximum bytes used by cache)
+      #   * 3000000 is default
+      DATALIMIT: 3000000
+
+      # IP address which would be served by dnscache
+      #   * 127.0.0.1 by default
+      IP : 10.0.0.1
+
+      # IP address for send DNS requests to another servers
+      #   * 0.0.0.0 by default
+      IPSEND: 0.0.0.0
+
+    # IP addresses/networks which dnscache serves
+    #   * partial IP address means network
+    clients:
+      - 127.0.0.1  # 127.0.0.1/32
+      - 192.168.1  # 192.168.1.0/24
+      - 10         # 10.0.0.0/8
+
+  # IP address of nameservers for specific zones
+    zones:
+      domain.com:
+        - 10.10.10.1 # IP address of nameserver for domain.com
+        - salt://mydns/domain.com # files with IP addresses of nameservers
+      another.my.domain.net:
+        - 10.10.10.2 # IP address of nameserver for another.my.domain.net
