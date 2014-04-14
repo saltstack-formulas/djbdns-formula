@@ -38,7 +38,7 @@ Install and configure dnscache. Fully supported all possible options.
 
 ``djbdns.tinydns``
 -----------
-Install and configure tynydns. Not workable yet, would be soon.
+Install and configure tynydns. Fully supported all possible options.
 
 Configuration
 =============

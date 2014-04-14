@@ -1,7 +1,7 @@
 djbdns:
   # for details about dnscache read http://cr.yp.to/djbdns/dnscache.html
   dnscache:
-    # primary settings
+    # common settings
     settings:
       # Service directory of dnscache service
       #   * /etc/sv/dnscache by default
@@ -30,9 +30,44 @@ djbdns:
       - 192.168.1  # 192.168.1.0/24
       - 10         # 10.0.0.0/8
 
-  # IP address of nameservers for specific zones
+    # IP address of nameservers for specific zones
     zones:
       domain.com:
         - 10.10.10.1 # IP address of nameserver for domain.com
       another.my.domain.net:
         - 10.10.10.2 # IP address of nameserver for another.my.domain.net
+  tinydns:
+    # common settings
+    settings:
+      # Service directory of dnscache service
+      #   * /etc/sv/dnscache by default
+      LOCATION: /etc/sv/tinydns
+
+      # IP address which would be served by tinydns
+      #   * 127.0.0.1 by default
+      IP : 10.0.0.1
+
+    # tinydns config generator: /etc/sv/tinydns/root/data
+    #
+    # For details how tinydns works and about format of config file please consult:
+    #   http://cr.yp.to/djbdns/tinydns-data.html
+    #
+    # For information about every record type please conslult with:
+    #   http://en.wikipedia.org/wiki/List_of_DNS_record_types
+    #
+    # List of supported by tinydns and actual formula records:
+    #   SOA: start of authority (delegate child zone to another nameserver)
+    #   NS: nameserver which serves zone
+    #   A: map FQDN (Fully Qualified Domain Name) to IP address
+    #   PTR: map IP address to FQDN (reverse DNS)
+    #   MX: mail server which serves zone
+    #   TXT: text record associated with domain. Can be usable (for instance) for Google Domain Verification
+    #   CNAME: map one domain name to another (FQDN or not)
+    #
+    # IMPORTANT NOTE: for workability any record in your zone you MUST specify SOA record for this or parent zone
+    #
+
+    # Example of salt://dns/mydomain.com
+    #  .my.domain.com::dns.domain.com
+    #  =pass.my.domain.com:33.33.33.33
+    data: salt://dns/my.domain.com
