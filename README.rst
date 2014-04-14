@@ -11,6 +11,11 @@ Here is formula for `djbdns <http://cr.yp.to/djbdns.html>`_.
 
 Please consult `Wikipedia: Djbdns - The main djbdns components <http://en.wikipedia.org/wiki/Djbdns#The_main_djbdns_components>`_ for understand what is it and how to use it.
 
+Supported platforms
+-------------------
+
+Currently supported only Ubuntu 12.04. Unfortunatelly, djbdns missed in all other linux distributives according to some license issues
+
 Tested workflow
 ---------------
 I tested it just with `split horizon <http://www.fefe.de/djbdns/#splithorizon>`_.
@@ -29,11 +34,11 @@ Available states
 
 ``djbdns.dnscache``
 ------------
-Install dnscache
+Install and configure dnscache. Fully supported all possible options.
 
 ``djbdns.tinydns``
 -----------
-Install tynydns
+Install and configure tynydns. Not workable yet, would be soon.
 
 Configuration
 =============
