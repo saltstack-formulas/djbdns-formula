@@ -34,6 +34,5 @@ djbdns:
     zones:
       domain.com:
         - 10.10.10.1 # IP address of nameserver for domain.com
-        - salt://mydns/domain.com # files with IP addresses of nameservers
       another.my.domain.net:
         - 10.10.10.2 # IP address of nameserver for another.my.domain.net
