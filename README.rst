@@ -22,7 +22,7 @@ I tested it just with `split horizon <http://www.fefe.de/djbdns/#splithorizon>`_
 
 According to `official FAQ <http://www.fefe.de/djbdns/#sameip>`_ you must use two separate network interfaces for that.
 
-How to use ths formula
+How to use this formula
 ----------------------
 See the full `Salt Formulas installation and usage instructions <http://docs.saltstack.com/topics/conventions/formulas.html>`_.
 
