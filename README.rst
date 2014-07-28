@@ -47,5 +47,5 @@ You can configure components by pillar.
 Other components
 ================
 
-All `other components <http://en.wikipedia.org/wiki/Djbdns#The_main_djbdns_components>`_ not supported by this formula.
+All `other components <http://en.wikipedia.org/wiki/Djbdns#Components>`_ not supported by this formula.
 Your pull requests are welcome
