@@ -24,7 +24,7 @@ According to `official FAQ <http://www.fefe.de/djbdns/#sameip>`_ you must use tw
 
 How to use this formula
 ----------------------
-See the full `Salt Formulas installation and usage instructions <http://docs.saltstack.com/topics/conventions/formulas.html>`_.
+See the full `Salt Formulas installation and usage instructions <http://docs.saltstack.com/en/latest/topics/development/conventions/formulas.html>`_.
 
 Available states
 ================
