@@ -36,8 +36,7 @@ Gtinydns:
         IP: {{ IP }}
 
 tinydns_packages:
-  pkg:
-    - installed
+  pkg.installed:
     - pkgs:
       - djbdns
       - daemontools
@@ -63,8 +62,7 @@ tinydns_packages:
         - file: /etc/service
 
 tinydns:
-  service:
-    - running
+  service.running:
     - provider: daemontools
     - require:
         - pkg: tinydns_packages
